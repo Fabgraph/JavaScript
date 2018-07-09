@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice</title>
+</head>
+<body>
+    <form method="" action="">
+        <label>Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" class="focus">
+
+        <br>
+
+        <label>Mot de passe</label>
+        <input type="password" name="mdp" id="mdp" class="focus">
+
+        <br>
+        <input type="submit" value="se connecter">
+    </form>
+
+    <script>
+        // Exercice : Lorsque vous êtes en focus (= évènement "focus") sur un input, sa bordure devient rouge. Puis lorsque vous êts en blur (= évènement "blur") sur un input, sa bordure redevient normale. Utilisez addEventListener.
+    
+        // correction avec une boucle for :
+        var inputs = document.querySelectorAll('.focus');
+
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', function() {
+                this.style.border = '1px solid red';
+            });
+
+            inputs[i].addEventListener('blur', function() {
+                this.style.border = '';
+            });
+        }
+    </script>
+</body>
+</html>
