@@ -1,0 +1,56 @@
+body {
+    font-family: 'Merienda', cursive;
+    background: #eff0f1;
+}
+
+nav {
+    background: #061339;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    background: url(../img/background.jpg);
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 5px 5px rgba(7, 7, 7, 0.4);
+}
+
+h2 {
+    padding-top: 15px;
+    color: #2f4073;
+}
+
+.corps, .section2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section {
+    background: #dedede;
+}
+
+.tete {
+    background: #7885a5;
+}
+
+footer {
+    background: #061339;
+    text-align: right;
+    color: #fff;
+    padding: 5px 10px 0 0;
+}
+
+.red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
