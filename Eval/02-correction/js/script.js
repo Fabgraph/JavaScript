@@ -1,6 +1,8 @@
 $(function(){
     var choix = $('#name');
     var raison = $('#texte');
+    var section = $('.section');
+    var tete = $('.tete');
     
     $('form').submit(function(event){
         var erreur = false;
@@ -13,6 +15,40 @@ $(function(){
         } else {
             choix.addClass('green');
         }
+
+        if(raison.val().length < 15){
+            raison.addClass('red');
+            erreur = true;
+        } else {
+            raison.addClass('green');
+        }
+
+        choix.on('change', function(){
+            $(this).removeClass('red green');
+        });
+    
+        raison.on('change', function(){
+            $(this).removeClass('red green');
+        });
+
+        if (erreur === false) {
+            $('form').html('Votre commande a bien été prise en compte');
+        }
+
+    }); /* fin submit */
+
+    section.mouseenter(function(){
+        tete.css({ background: '#061339' });
     });
+
+    section.mouseleave(function(){
+        tete.css({ background: '#7885a' });
+    });
+
+    // Optionnel ne l'écrive que ceux qui veulent
+    // section.bind('mouseenter mouseleave', function(){
+    //     tete.css({ background: '#061339' });
+
+    // })
 
 }); // fin document ready
