@@ -46,9 +46,7 @@ $(function(){
     });
 
     // Optionnel ne l'écrive que ceux qui veulent
-    // section.bind('mouseenter mouseleave', function(){
-    //     tete.css({ background: '#061339' });
-
-    // })
+    //  
+    
 
 }); // fin document ready
